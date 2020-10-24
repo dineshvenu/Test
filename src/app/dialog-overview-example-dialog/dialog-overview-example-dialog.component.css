@@ -66,6 +66,13 @@
     background-size:100% 100%;
     background-repeat: no-repeat;
 }
+.modal-backdrop {
+    display: none !important;
+  }
+  .modal-open .modal {
+      width: 300px;
+      margin: 0 auto;
+  }
 .Chat-icon {
     position: relative;
     width: 95px;
@@ -137,10 +144,6 @@
     font-family: cursive;
     font-weight: bold;
 
-}
-.modal-open .modal {
-    width: 300px;
-    margin: 0 auto;
 }
 
 .chatdelete{

@@ -1,0 +1,46 @@
+<div  tabindex="-1" role="dialog" aria-labelledby="myModalLabel"  data-keyboard="false" data-backdrop="static">
+    <div  role="document">
+      <div class="modal-content closeModel" id="closeModel">
+          <h6><i id="chatdone">Chat Done &#9829;</i><i class="close" data-dismiss="modal" id="close" class="fa fa-times">x</i></h6>
+     </div>
+      <section class="modal-content" data-keyboard="false" data-backdrop="static"> 
+        <div class="card"  data-keyboard="false" data-backdrop="static">
+            <div id="chat_header" class="card-title">
+              <div class="d-flex flex-row">
+                  <div class="p-2 h2" id="botname" style="width:60% !important">Simple AI</div>
+                  
+                    <div class="pull-right" style="margin-top:10px !important;"> <button type="button" class="btn btn-danger" (click)="chatlogs.innerHTML = ''">Delete Chat</button></div>
+                    
+                  
+                 </div>
+             </div>
+             <br/>
+            <div class="card-body" id="chatlogs" #chatlogs > 
+             
+            </div>
+            <hr/>
+            <div id="chat_footer">
+              <div class="input-bar">
+                  <div class="input-bar-item width100">
+                    <form #inputMsg="ngForm" (ngSubmit)="onSubmit()">
+                        <div class="input-group">
+                          <input required placeholder="Enter Message here" (ngModelChange)="Empty()" type="text" class="form-control width100 rounded" name="chatModal.inputQuery" [(ngModel)]="chatModal.inputQuery">
+                          <span *ngIf="sendButton==true" class="input-group-btn">                          
+                              <button type="submit" class="btn btn-danger btn-block rounded">
+                                  <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                              </button>
+                          </span>
+                          <span *ngIf="sendButton==false" class="input-group-btn">                          
+                              <button type="submit" class="btn btn-danger btn-block rounded" disabled>
+                                  <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                              </button>
+                          </span>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </section>
+    </div>
+  </div>

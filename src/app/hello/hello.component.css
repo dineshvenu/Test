@@ -1,0 +1,7 @@
+p {
+    font-family: Lato;
+  }
+  
+  .modal.fade.in.show {
+      pointer-events: none;
+  }
